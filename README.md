@@ -40,18 +40,18 @@ EOF
 
 git clone https://github.com/common-workflow-language/common-workflow-language.git cwl-v1.0
 pushd cwl-v1.0 ; \
-  ./run_test.sh --junit-xml=${dest}/cwl-v1.0/junit.xml --badgedir=${dest}/badges RUNNER=toil-cwl-runner EXTRA="{extra_opts}" ; \
+  ./run_test.sh --junit-xml=${dest}/cwl-v1.0/junit.xml --badgedir=${dest}/badges RUNNER=toil-cwl-runner EXTRA="${extra_opts}" ; \
   popd
 
 git clone https://github.com/common-workflow-language/cwl-v1.1.git
 pushd cwl-v1.1 ; \
-  ./run_test.sh --junit-xml=${dest}/cwl-v1.1/junit.xml --badgedir=${dest}/badges RUNNER=toil-cwl-runner EXTRA="{extra_opts}" ; \
+  ./run_test.sh --junit-xml=${dest}/cwl-v1.1/junit.xml --badgedir=${dest}/badges RUNNER=toil-cwl-runner EXTRA="${extra_opts}" ; \
   popd
 
 git clone https://github.com/common-workflow-language/cwl-v1.2.git --branch main
 # this repo defaults to the CWL v1.2.1 development branch
 pushd cwl-v1.2 ; \
-  ./run_test.sh --junit-xml=${dest}/cwl-v1.2/junit.xml --badgedir=${dest}/badges RUNNER=toil-cwl-runner EXTRA="{extra_opts}" ; \
+  ./run_test.sh --junit-xml=${dest}/cwl-v1.2/junit.xml --badgedir=${dest}/badges RUNNER=toil-cwl-runner EXTRA="${extra_opts}" ; \
   popd
 ```
 
